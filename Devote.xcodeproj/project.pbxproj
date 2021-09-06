@@ -19,6 +19,7 @@
 		4133894A26E67C5E00E43D3B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4133894926E67C5E00E43D3B /* Constant.swift */; };
 		4133894C26E68D3300E43D3B /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4133894B26E68D3300E43D3B /* HideKeyboardExtension.swift */; };
 		4133894E26E68F0500E43D3B /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4133894D26E68F0500E43D3B /* BackgroundImageView.swift */; };
+		4133895026E68FA700E43D3B /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4133894F26E68FA700E43D3B /* NewTaskItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		4133894926E67C5E00E43D3B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		4133894B26E68D3300E43D3B /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
 		4133894D26E68F0500E43D3B /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
+		4133894F26E68FA700E43D3B /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				4133892426E670A000E43D3B /* ContentView.swift */,
 				4133894D26E68F0500E43D3B /* BackgroundImageView.swift */,
+				4133894F26E68FA700E43D3B /* NewTaskItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				4133894A26E67C5E00E43D3B /* Constant.swift in Sources */,
 				4133892F26E670A100E43D3B /* Devote.xcdatamodeld in Sources */,
 				4133892326E670A000E43D3B /* DevoteApp.swift in Sources */,
+				4133895026E68FA700E43D3B /* NewTaskItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

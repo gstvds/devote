@@ -71,7 +71,7 @@ struct ContentView: View {
 					.foregroundColor(.white)
 					
 					Spacer(minLength: 80)
-
+					
 					// MARK: - New Task Button
 					Button(action: {
 						showNewTaskItem = true
@@ -95,7 +95,7 @@ struct ContentView: View {
 						x: 0.0,
 						y: 4.0
 					) //: shadow
-
+					
 					// MARK: - Tasks
 					List {
 						ForEach(items) { item in
@@ -108,15 +108,21 @@ struct ContentView: View {
 					.padding(.vertical, 0)
 					.frame(maxWidth: 640)
 				} //: VStack
-
+				.blur(radius: showNewTaskItem ? 8.0 : 0, opaque: false)
+				.transition(.move(edge: .bottom))
+				.animation(.easeOut(duration: 0.5))
+				
 				// MARK: - New Task Item
 				if showNewTaskItem {
-					BlankView()
-						.onTapGesture {
-							withAnimation() {
-								showNewTaskItem = false
-							} //: withAnimation
-						} //: onTapGesture
+					BlankView(
+						backgroundColor: isDarkMode ? Color.black : Color.gray,
+						backgroundOpacity: isDarkMode ? 0.3 : 0.5
+					) //: BlankView
+					.onTapGesture {
+						withAnimation() {
+							showNewTaskItem = false
+						} //: withAnimation
+					} //: onTapGesture
 					NewTaskItemView(isShowing: $showNewTaskItem)
 				}
 			} //: ZStack
@@ -127,6 +133,7 @@ struct ContentView: View {
 			.navigationBarHidden(true)
 			.background(
 				BackgroundImageView()
+					.blur(radius: showNewTaskItem ? 8.0 : 0, opaque: false)
 			) //: background
 			.background(
 				backgroundGradient.ignoresSafeArea(.all)

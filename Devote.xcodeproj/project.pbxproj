@@ -78,10 +78,10 @@
 		4133892126E670A000E43D3B /* Devote */ = {
 			isa = PBXGroup;
 			children = (
-				4133892626E670A100E43D3B /* Assets.xcassets */,
-				4133892226E670A000E43D3B /* DevoteApp.swift */,
-				4133894126E6717900E43D3B /* Extension */,
 				4133893026E670A100E43D3B /* Info.plist */,
+				4133892226E670A000E43D3B /* DevoteApp.swift */,
+				4133892626E670A100E43D3B /* Assets.xcassets */,
+				4133894126E6717900E43D3B /* Extension */,
 				4133894226E6717F00E43D3B /* Model */,
 				4133892826E670A100E43D3B /* Preview Content */,
 				4133893D26E6714500E43D3B /* Sound */,
@@ -113,11 +113,11 @@
 		4133893F26E6716600E43D3B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4133892426E670A000E43D3B /* ContentView.swift */,
 				4133894D26E68F0500E43D3B /* BackgroundImageView.swift */,
-				4133894F26E68FA700E43D3B /* NewTaskItemView.swift */,
 				4133895126E6920900E43D3B /* BlankView.swift */,
+				4133892426E670A000E43D3B /* ContentView.swift */,
 				412AA40726E6B3C7002248E6 /* ListRowItemView.swift */,
+				4133894F26E68FA700E43D3B /* NewTaskItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

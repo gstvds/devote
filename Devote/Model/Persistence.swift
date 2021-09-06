@@ -30,18 +30,21 @@ struct PersistenceController {
 	
 	// MARK: - Preview
 	static var preview: PersistenceController = {
-			let result = PersistenceController(inMemory: true)
-			let viewContext = result.container.viewContext
-			for _ in 0..<10 {
-					let newItem = Item(context: viewContext)
-					newItem.timestamp = Date()
-			}
-			do {
-					try viewContext.save()
-			} catch {
-					let nsError = error as NSError
-					fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-			}
-			return result
+		let result = PersistenceController(inMemory: true)
+		let viewContext = result.container.viewContext
+		for i in 0..<5 {
+			let newItem = Item(context: viewContext)
+			newItem.timestamp = Date()
+			newItem.task = "Sample Task No\(i)"
+			newItem.completion = false
+			newItem.id = UUID()
+		}
+		do {
+			try viewContext.save()
+		} catch {
+			let nsError = error as NSError
+			fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+		}
+		return result
 	}()
 }

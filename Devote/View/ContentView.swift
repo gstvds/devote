@@ -13,10 +13,9 @@ struct ContentView: View {
 	@State var task: String = ""
 	@State private var showNewTaskItem: Bool = false
 	@AppStorage("isDarkMode") private var isDarkMode: Bool = false
-	
-	// MARK: - Fetch Data
 	@Environment(\.managedObjectContext) private var viewContext
 	
+	// MARK: - Fetch Data	
 	@FetchRequest(
 		sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
 		animation: .default)
@@ -100,14 +99,7 @@ struct ContentView: View {
 					// MARK: - Tasks
 					List {
 						ForEach(items) { item in
-							VStack(alignment: .leading) {
-								Text(item.task ?? "")
-									.font(.headline)
-									.fontWeight(.bold)
-								Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-									.font(.footnote)
-									.foregroundColor(.gray)
-							} //: VStack
+							ListRowItemView(item: item)
 						} //: ForEach
 						.onDelete(perform: deleteItems)
 					} //: List

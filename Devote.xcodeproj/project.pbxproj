@@ -16,6 +16,7 @@
 		4133893926E6712700E43D3B /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4133893626E6712700E43D3B /* sound-tap.mp3 */; };
 		4133893A26E6712700E43D3B /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4133893726E6712700E43D3B /* sound-rise.mp3 */; };
 		4133893B26E6712700E43D3B /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4133893826E6712700E43D3B /* sound-ding.mp3 */; };
+		4133894A26E67C5E00E43D3B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4133894926E67C5E00E43D3B /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		4133893726E6712700E43D3B /* sound-rise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-rise.mp3"; sourceTree = "<group>"; };
 		4133893826E6712700E43D3B /* sound-ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-ding.mp3"; sourceTree = "<group>"; };
 		4133894326E6768800E43D3B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4133894926E67C5E00E43D3B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +66,15 @@
 		4133892126E670A000E43D3B /* Devote */ = {
 			isa = PBXGroup;
 			children = (
-				4133893026E670A100E43D3B /* Info.plist */,
-				4133892226E670A000E43D3B /* DevoteApp.swift */,
 				4133892626E670A100E43D3B /* Assets.xcassets */,
+				4133892226E670A000E43D3B /* DevoteApp.swift */,
 				4133894126E6717900E43D3B /* Extension */,
+				4133893026E670A100E43D3B /* Info.plist */,
 				4133894226E6717F00E43D3B /* Model */,
 				4133892826E670A100E43D3B /* Preview Content */,
 				4133893D26E6714500E43D3B /* Sound */,
 				4133894026E6717300E43D3B /* Style */,
+				4133894826E67C4300E43D3B /* Util */,
 				4133893F26E6716600E43D3B /* View */,
 			);
 			path = Devote;
@@ -124,6 +127,14 @@
 				4133892D26E670A100E43D3B /* Devote.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4133894826E67C4300E43D3B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				4133894926E67C5E00E43D3B /* Constant.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 			files = (
 				4133892C26E670A100E43D3B /* Persistence.swift in Sources */,
 				4133892526E670A000E43D3B /* ContentView.swift in Sources */,
+				4133894A26E67C5E00E43D3B /* Constant.swift in Sources */,
 				4133892F26E670A100E43D3B /* Devote.xcdatamodeld in Sources */,
 				4133892326E670A000E43D3B /* DevoteApp.swift in Sources */,
 			);

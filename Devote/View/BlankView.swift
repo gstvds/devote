@@ -11,7 +11,7 @@ struct BlankView: View {
 	// MARK: - Properties
 	var backgroundColor: Color
 	var backgroundOpacity: Double
-
+	
 	// MARK: - Body
 	var body: some View {
 		VStack {

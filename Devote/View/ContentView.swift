@@ -11,6 +11,7 @@ import CoreData
 struct ContentView: View {
 	// MARK: - Properties
 	@State var task: String = ""
+	@State private var showNewTaskItem: Bool = false
 	
 	// MARK: - Fetch Data
 	@Environment(\.managedObjectContext) private var viewContext
@@ -38,9 +39,36 @@ struct ContentView: View {
 	var body: some View {
 		NavigationView {
 			ZStack {
+				// MARK: - Main View
 				VStack {
-					
-					
+					// MARK: - Header
+					Spacer(minLength: 80)
+
+					// MARK: - New Task Button
+					Button(action: {
+						showNewTaskItem = true
+					}, label: {
+						Image(systemName: "plus.circle")
+							.font(.system(size: 30, weight: .semibold, design: .rounded))
+						
+						Text("New Task")
+							.font(.system(size: 24, weight: .bold, design: .rounded))
+							.foregroundColor(.white)
+					}) //: Button
+					.padding(.horizontal, 20)
+					.padding(.vertical, 15)
+					.background(
+						LinearGradient(gradient: Gradient(colors: [Color.pink, Color.blue]), startPoint: .leading, endPoint: .trailing)
+							.clipShape(Capsule())
+					) //: background
+					.shadow(
+						color: Color(red: 0, green: 0, blue: 0, opacity: 0.25),
+						radius: 8,
+						x: 0.0,
+						y: 4.0
+					) //: shadow
+
+					// MARK: - Tasks
 					List {
 						ForEach(items) { item in
 							VStack(alignment: .leading) {
@@ -59,6 +87,17 @@ struct ContentView: View {
 					.padding(.vertical, 0)
 					.frame(maxWidth: 640)
 				} //: VStack
+
+				// MARK: - New Task Item
+				if showNewTaskItem {
+					BlankView()
+						.onTapGesture {
+							withAnimation() {
+								showNewTaskItem = false
+							} //: withAnimation
+						} //: onTapGesture
+					NewTaskItemView(isShowing: $showNewTaskItem)
+				}
 			} //: ZStack
 			.onAppear() {
 				UITableView.appearance().backgroundColor = UIColor.clear
